@@ -29,7 +29,7 @@ class QuizStarter:
 
     self.var1=IntVar()
 
-    self.user_label=Label(window, text="Please Enter your Username Below: ", font=( "Eccentric Std","16","bold"),bg="lightgrey")
+    self.user_label=Label(window, text="Please Enter your Username Below: ", font=( "Eccentric Std","16","bold"),bg="lightblue")
     self.user_label.place(x=10,y=350)
 
     self.entry_box=Entry(window)
@@ -49,36 +49,36 @@ class QuizStarter:
 class Quiz:
 
    def __init__(self, parent):
-    background_color="lightgrey"
+    background_color="lightblue"
      
-    self.quiz_frame = Frame(parent, bg = background_color, padx=40, pady=40)
+    self.quiz_frame = Frame(parent, bg = "lightblue",padx=40, pady=40)
     self.quiz_frame.grid()
 
     randomiser()
 
     self.question_label=Label(window, text = questions_answers[qnum][0], font =( "Tw Cen MT","18","bold"))
-    self.question_label.grid(row= 0, padx=10, pady=10)  
+    self.question_label.place(x=10,y=300)    
 
     self.var1=IntVar()
 
-    self.rb1 = Radiobutton(window, text = questions_answers[qnum][1], font=("Helvetica", "12"), bg=background_color, value=1, variable=self.var1, pady=10)
-    self.rb1.grid(row=1, sticky=W)
+    self.rb1 = Radiobutton(window, text = questions_answers[qnum][1], font=("Helvetica", "12"), bg="lightblue", value=1, variable=self.var1, pady=10)
+    self.rb1.place(x=20,y=350)
 
-    self.rb2 = Radiobutton(window, text = questions_answers[qnum][2], font=("Helvetica", "12"), bg=background_color, value=2, variable=self.var1, pady=10)
-    self.rb2.grid(row=2, sticky=W)
+    self.rb2 = Radiobutton(window, text = questions_answers[qnum][2], font=("Helvetica", "12"), bg="lightblue", value=2, variable=self.var1, pady=10)
+    self.rb2.place(x=20,y=400)
 
-    self.rb3 = Radiobutton(window, text = questions_answers[qnum][3], font=("Helvetica", "12"), bg=background_color, value=3, variable=self.var1, pady=10)
-    self.rb3.grid(row=3, sticky=W)
+    self.rb3 = Radiobutton(window, text = questions_answers[qnum][3], font=("Helvetica", "12"), bg="lightblue", value=3, variable=self.var1, pady=10)
+    self.rb3.place(x=20,y=450)
 
-    self.rb4 = Radiobutton(window, text = questions_answers[qnum][4], font=("Helvetica", "12"), bg=background_color, value=4, variable=self.var1, pady=10)
-    self.rb4.grid(row=4, sticky=W)
+    self.rb4 = Radiobutton(window, text = questions_answers[qnum][4], font=("Helvetica", "12"), bg="lightblue", value=4, variable=self.var1, pady=10)
+    self.rb4.place(x=20,y=500)
 
-    self.confirm_button = Button(window, text="Confrim",bg="white",command=self.test_progress)
-    self.confirm_button.grid(row=6)
+    self.confirm_button = Button(window, text="Confrim",bg="lightblue",command=self.test_progress)
+    self.confirm_button.place(x=200,y=400)
     self.score_label  = Label(window, text =
                              'score')
-    self.score_label.grid(row= 7)  
-     
+    self.score_label.place(x=220,y=450)  
+    
      
    def questions_setup(self):
      randomiser()
