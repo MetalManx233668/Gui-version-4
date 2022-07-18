@@ -7,14 +7,17 @@ global questions_answers
 asked = []
 
 questions_answers = {
-    1: ["What is the biggest continent in the world?", 'South America', 'Asia','Europe', 'Antartica' ,'Asia',1],
-    2: ["Which state is Niagra falls in?",'Calafornia','New York','Los Angeles', 'Florida','New York',2],
-    3: ["Where would you find the leaning tower of pisa?", 'Italy','Spain', 'Greece','Sweden','Italy',4],
+    1: ["What is the biggest continent in the world?", 'South America', 'Asia','Europe', 'Antartica' ,'Asia',2],
+    2: ["Which state is Niagra falls in?",'California','New York','Los Angeles', 'Florida','New York',2],
+    3: ["Where would you find the leaning tower of pisa?", 'Italy','Spain', 'Greece','Sweden','Italy',1],
+    4: ["In which country is cricket the national sport?",'South Africa','India','Australia','England','England',4],
+    5: ["Which pacific nation has suva as their capital?", 'Tonga','Samoa','Fiji','Niue','Fiji',3],
+  
 }
 
 def randomiser():
     global qnum
-    qnum = random.randint(1,3)
+    qnum = random.randint(1,5)
     if qnum not in asked:
       asked.append(qnum)
     elif qnum in asked:
